@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+
+    <title>Pig Game</title>
+  </head>
+
+  <body>
+    <div class="wrapper clearfix">
+      <!-- PLAYER PANEL -->
+      <div class="player-0-panel">
+        <div class="player-name" id="name-0">PLAYER</div>
+        <div class="player-score" id="score-0">
+          <img class="player-hand" src="rock.png" alt="" />
+        </div>
+
+        <div class="match">
+          <i class="player-game-1 drawn-match ion-android-remove active"></i>
+          <i class="player-game-2 drawn-match ion-android-remove"></i>
+          <i class="player-game-3 drawn-match ion-android-remove"></i>
+          <i class="player-game-4 drawn-match ion-android-remove"></i>
+          <i class="player-game-5 drawn-match ion-android-remove"></i>
+        </div>
+      </div>
+
+      <!-- COME PANEL -->
+      <div class="player-1-panel">
+        <div class="player-name" id="name-1">COM</div>
+        <div class="player-score" id="score-1">
+          <img class="com-hand" src="rock.png" alt="" />
+        </div>
+
+        <div class="match">
+          <i class="com-game-1 drawn-match ion-android-remove active"></i>
+          <i class="com-game-2 drawn-match ion-android-remove"></i>
+          <i class="com-game-3 drawn-match ion-android-remove"></i>
+          <i class="com-game-4 drawn-match ion-android-remove"></i>
+          <i class="com-game-5 drawn-match ion-android-remove"></i>
+          <!--
+                    ion-checkmark
+                    ion-close
+                 -->
+        </div>
+      </div>
+
+      <!-- NEW GAME BUTTON -->
+      <button class="btn-new">
+        <i class="ion-ios-plus-outline"></i>New game
+      </button>
+
+      <!-- CHOOSE BOX -->
+      <div class="player-current-box  btn-choose">
+        <div class="player-current-label">CHOOSE</div>
+        <div class="player-current-score" id="current-1">
+          <div class="player-choose">
+            <div class="button-choose">
+              <img class="scissors" src="scissors.png" alt="" />
+            </div>
+            <div class="button-choose">
+              <img class="rock" src="rock.png" alt="" />
+            </div>
+            <div class="button-choose">
+              <img class="paper" src="paper.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="challenges.js"></script>
+  </body>
+</html>
