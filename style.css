@@ -71,6 +71,7 @@ body {
 }
 
 .player-score img {
+  transition: all 1s;
   width: 50%;
 }
 

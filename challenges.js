@@ -6,10 +6,11 @@ init();
 
 document
   .querySelectorAll(".button-choose")
-  .forEach(e => e.addEventListener("click", startGame));
+  .forEach(choose => choose.addEventListener("click", startGame));
 
-function startGame(e) {
-  let playerChoose = String(...e.target.classList);
+/// TBD --> *functions should do 1 thing* ///
+function startGame(choose) {
+  let playerChoose = String(...choose.target.classList);
   if (gamePlaying) {
     // 1. Progress game
     game++;
@@ -23,17 +24,14 @@ function startGame(e) {
     // 3. Random Com choice
     let comChoose = Math.floor(Math.random() * 3);
     let comHand = choices[comChoose];
-    console.log(comHand);
 
     // 4. Display Com hand
     var image = document.querySelector(".com-hand");
     image.src = comHand + ".png";
 
     // 5. Update results
-    let playerGame = document.querySelector(".player-game-" + game);
-    let comGame = document.querySelector(".com-game-" + game);
-    playerGame.classList.add("active");
-    comGame.classList.add("active");
+    player.classList.add("active");
+    com.classList.add("active");
 
     if (playerChoose === "scissors" && comHand === "paper") {
       playerScore++;
